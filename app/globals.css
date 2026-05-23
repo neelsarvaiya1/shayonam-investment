@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #0F172A;
+  --color-on-primary: #FFFFFF;
+  --color-primary-container: #1E293B;
+  --color-on-primary-container: #94A3B8;
+  
+  --color-secondary: #B1924E; /* Refined muted gold */
+  --color-on-secondary: #FFFFFF;
+  --color-secondary-container: #F1E5C7;
+  --color-on-secondary-container: #6A562A;
+
+  --color-surface: #FDFBF7; /* Warm ivory backgrounds */
+  --color-surface-dim: #EAE6DF;
+  --color-surface-bright: #FFFFFF;
+  --color-surface-container-lowest: #FFFFFF;
+  --color-surface-container-low: #F6F4EF;
+  --color-surface-container: #F0EBE1;
+  --color-surface-container-high: #EBE4D5;
+  --color-surface-container-highest: #E4DCCB;
+  --color-on-surface: #0F172A;
+  --color-surface-variant: #EBE4D5;
+  --color-on-surface-variant: #475569;
+  
+  --color-background: #FDFBF7;
+  --color-on-background: #0F172A;
+
+  --color-outline: #94A3B8;
+  --color-outline-variant: #CBD5E1;
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-playfair), ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+}
+
+@layer utilities {
+  .glass-nav {
+    backdrop-filter: blur(24px);
+    background-color: rgba(253, 251, 247, 0.85);
+    border-bottom: 1px solid rgba(177, 146, 78, 0.15);
+  }
+  
+  .glass-card {
+    backdrop-filter: blur(24px);
+    background-color: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(177, 146, 78, 0.15);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.02);
+  }
+
+  .text-gradient {
+    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
