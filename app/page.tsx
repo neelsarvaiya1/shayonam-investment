@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowRight, TrendingUp, Shield, BarChart3, ChevronDown } from 'lucide-react';
 import { useRef } from 'react';
-
+import { supabase } from '@/lib/supabase';
 
 export default function Home() {
   const containerRef = useRef<HTMLDivElement>(null);
