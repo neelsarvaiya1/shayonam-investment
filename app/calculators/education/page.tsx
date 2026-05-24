@@ -50,7 +50,7 @@ export default function ChildEducationCalculatorPage() {
     }
 
     return { futureCost: target, monthlySip: sip, chartData: data };
-  }, [childAge, collegeAge, currentCost, educationInflation, expectedReturn, yearsToCollege, monthsToCollege, monthlyRate]);
+  }, [childAge, currentCost, educationInflation, yearsToCollege, monthsToCollege, monthlyRate]);
 
   const resetCalculator = () => {
     setChildAge(3);
@@ -74,7 +74,7 @@ export default function ChildEducationCalculatorPage() {
           </Link>
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-4 mb-6">
-              <div className="w-12 h-12 bg-secondary/10 text-secondary rounded-xl flex items-center justify-center">
+               <div className="w-12 h-12 bg-secondary/10 text-secondary rounded-xl flex items-center justify-center">
                 <GraduationCap className="w-6 h-6" />
               </div>
               <h1 className="text-4xl md:text-5xl font-serif font-bold text-primary">Child Education</h1>
@@ -84,7 +84,7 @@ export default function ChildEducationCalculatorPage() {
             </button>
           </div>
           <p className="text-xl text-on-surface-variant font-sans leading-relaxed">
-            Education costs rise faster than standard inflation. Calculate how much you must invest today to secure your child's future higher education.
+            Education costs rise faster than standard inflation. Calculate how much you must invest today to secure your child&apos;s future higher education.
           </p>
         </motion.div>
 

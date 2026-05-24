@@ -23,23 +23,22 @@ export default function AdminPage() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    async function fetchLeads() {
+      const { data, error } = await supabase
+        .from('leads')
+        .select('*')
+        .order('id', { ascending: false });
+
+      if (!error) {
+        setLeads(data || []);
+        setLoading(false);
+      }
+    }
+
     if (authorized) {
       fetchLeads();
     }
   }, [authorized]);
-
-  async function fetchLeads() {
-    const { data, error } = await supabase
-      .from('leads')
-      .select('*')
-      .order('id', { ascending: false });
-
-    if (!error) {
-      setLeads(data || []);
-      setLoading(false);
-    }
-  }
-
   function handleLogin() {
     if (password === 'Shayonam2026') {
       setAuthorized(true);

@@ -195,7 +195,7 @@ export default function FinancialFreedomCalculatorPage() {
              {/* Charts */}
              <div className="bg-surface p-6 md:p-8 rounded-3xl border border-outline-variant shadow-sm flex flex-col">
                 <h3 className="text-lg font-serif font-bold text-primary mb-2">The Crossover Point</h3>
-                <p className="text-sm text-on-surface-variant font-sans mb-6">When your wealth line crosses the target line, you are 'FIRE' ready.</p>
+                <p className="text-sm text-on-surface-variant font-sans mb-6">When your wealth line crosses the target line, you are &apos;FIRE&apos; ready.</p>
                 <div className="h-[300px]">
                   <ResponsiveContainer width="100%" height="100%">
                     <AreaChart data={chartData} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>

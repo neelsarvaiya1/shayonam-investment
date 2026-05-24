@@ -97,7 +97,7 @@ const [message, setMessage] = useState("");
             Request a <span className="text-[#C7A86D]">Consultation</span>
           </h1>
           <p className="text-lg text-[#666666] font-sans leading-relaxed mb-10">
-            Let's discuss your financial legacy. Provide us with some details about your goals, and a principal advisor will contact you to schedule a confidential discussion.
+            Let&apos;s discuss your financial legacy. Provide us with some details about your goals, and a principal advisor will contact you to schedule a confidential discussion.
           </p>
           
           <div className="space-y-6">

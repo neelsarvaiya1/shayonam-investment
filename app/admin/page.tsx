@@ -20,27 +20,26 @@ export default function AdminPage() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetchLeads();
-  }, []);
+    async function fetchLeads() {
+      const { data, error } = await supabase
+        .from('leads')
+        .select('*')
+        .order('id', { ascending: false });
 
-  async function fetchLeads() {
-    const { data, error } = await supabase
-      .from('leads')
-      .select('*')
-      .order('id', { ascending: false });
+      console.log('SUPABASE DATA:', data);
+      console.log('SUPABASE ERROR:', error);
 
-    console.log('SUPABASE DATA:', data);
-    console.log('SUPABASE ERROR:', error);
+      if (error) {
+        console.error(error);
+        return;
+      }
 
-    if (error) {
-      console.error(error);
-      return;
+      setLeads(data || []);
+      setLoading(false);
     }
 
-    setLeads(data || []);
-    setLoading(false);
-  }
-
+    fetchLeads();
+  }, []);
   return (
     <div className="min-h-screen bg-[#f8f5ef] p-8">
       <div className="max-w-7xl mx-auto">
