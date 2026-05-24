@@ -21,7 +21,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.variable} ${playfair.variable} font-sans antialiased bg-background text-on-surface`}>
         <NavigationSystem />
-        {children}
+        <main className="relative z-0">
+          {children}
+        </main>
         <Footer />
       </body>
     </html>

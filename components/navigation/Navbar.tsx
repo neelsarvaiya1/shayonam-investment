@@ -18,7 +18,7 @@ export function Navbar({ onMenuClick }: { onMenuClick: () => void }) {
   ];
 
   return (
-    <nav className="fixed top-0 w-full z-40 bg-white/85 backdrop-blur-2xl border-b border-[#162033]/5 shadow-[0_4px_30px_rgba(22,32,51,0.02)] transition-all duration-300">
+    <nav className="fixed top-0 w-full z-50 bg-white/85 backdrop-blur-2xl border-b border-[#162033]/5 shadow-[0_4px_30px_rgba(22,32,51,0.02)] transition-all duration-300">
       <div className="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
         {/* Brand Logo */}
         <Link href="/" className="font-serif text-2xl font-bold text-[#162033]">
